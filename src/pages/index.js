@@ -144,7 +144,7 @@ const IndexPage = () => {
                       <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-slate-500 text-white dark:bg-slate-400">
                         {benefit.image}
                       </div>
-                      <p className="ml-16 text-lg font-bold leading-6 font-medium text-gray-900 dark:text-gray-400">
+                      <p className="ml-16 text-lg font-bold leading-6 text-gray-900 dark:text-gray-400">
                         {benefit.title}
                       </p>
                     </dt>

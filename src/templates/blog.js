@@ -9,6 +9,7 @@ const title = "Windup Blog";
 
 const BlogIndex = ({ data, pageContext }) => {
   const posts = data.allMdx.nodes;
+  console.log(posts);
 
   return (
     <div className="max-w-screen-xl page-wrapper">
@@ -50,6 +51,15 @@ export const pageQuery = graphql`
           date(formatString: "MMM D, YYYY")
           title
           description
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                aspectRatio: 2.22
+                formats: [AUTO, WEBP]
+              )
+            }
+          }
         }
       }
     }

@@ -144,21 +144,21 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "${__dirname}/src/images",
+        path: `${__dirname}/src/images`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blog",
-        path: "${__dirname}/src/content/blog",
+        path: `${__dirname}/src/content/blog`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "${__dirname}/src/pages",
+        path: `${__dirname}/src/pages`,
       },
     },
     "gatsby-awesome-pagination",
