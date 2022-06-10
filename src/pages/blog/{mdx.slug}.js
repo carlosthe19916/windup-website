@@ -46,7 +46,6 @@ export default function PostPage({ data, ...props }) {
             {tags !== null && (
               <div className="flex w-full items-center space-x-2">
                 <h2>Tags:</h2>
-
                 <Tags tags={tags} />
               </div>
             )}

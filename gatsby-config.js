@@ -47,7 +47,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
-    "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -96,6 +95,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mdx",
       options: {
+        extensioextensions: [`.md`, `.mdx`],
         defaultLayouts: {
           pages: require.resolve("./src/templates/page.js"),
         },

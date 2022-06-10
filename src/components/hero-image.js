@@ -8,7 +8,7 @@ const HeroImage = ({ image, innerClassName, ...other }) => {
     return (
       <div {...other}>
         <StaticImage
-          alt=""
+          alt="Hero image"
           layout="fullWidth"
           aspectRatio="2.22"
           className={innerClassName}
@@ -20,7 +20,7 @@ const HeroImage = ({ image, innerClassName, ...other }) => {
 
   return (
     <div {...other}>
-      <GatsbyImage className={innerClassName} image={hero} alt="" />
+      <GatsbyImage className={innerClassName} image={hero} alt="Hero" />
     </div>
   );
 };

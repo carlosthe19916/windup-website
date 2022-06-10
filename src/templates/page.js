@@ -77,7 +77,7 @@ export default function Page({ children, ...props }) {
             <GatsbyImage
               className="mt-6 rounded-md before:text-transparent before:absolute before:pointer-events-none before:z-[1] before:w-full before:h-full before:shadow-image before:rounded-md relative"
               image={bannerImg}
-              alt=""
+              alt="Banner"
             />
           </div>
           <h1 className="mt-6 font-medium text-3xl md:text-4xl font-headings !leading-snug">

@@ -23,17 +23,17 @@ const ShareButtons = ({ title, url, twitterHandle, tags }) => {
         hashtags={tags}
       >
         <span className="sr-only">Share on Twitter</span>
-        <Twitter alt="" className={iconClass} />
+        <Twitter alt="Twitter" className={iconClass} />
       </TwitterShareButton>
 
       <LinkedinShareButton className={buttonClass} url={url}>
         <span className="sr-only">Share on LinkedIn</span>
-        <Linkedin alt="" className={iconClass} />
+        <Linkedin alt="LinkedIn" className={iconClass} />
       </LinkedinShareButton>
 
       <FacebookShareButton className={buttonClass} url={url}>
         <span className="sr-only">Share on Facebook</span>
-        <Facebook alt="" className={iconClass} />
+        <Facebook alt="Facebook" className={iconClass} />
       </FacebookShareButton>
     </div>
   );
