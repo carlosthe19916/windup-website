@@ -4,6 +4,7 @@ const buildEnv = process.env.GATSBY_BUILD_ENV
   : process.env.NODE_ENV;
 
 module.exports = {
+  pathPrefix: "/windup-website",
   siteMetadata: {
     title: `Windup Community`,
     description: `Windup description`,
