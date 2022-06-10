@@ -5,7 +5,7 @@ import Pagination from "../components/pagination";
 import PostCard from "../components/postcard";
 import BlogSidebar from "../components/blogsidebar";
 
-const title = "Konveyor Blog";
+const title = "Windup Blog";
 
 const BlogIndex = ({ data, pageContext }) => {
   const posts = data.allMdx.nodes;

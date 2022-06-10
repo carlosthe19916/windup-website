@@ -23,6 +23,11 @@ export default function Page({ children, ...props }) {
     <StaticQuery
       query={graphql`
         {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
           allMdx(
             sort: { order: DESC, fields: frontmatter___date }
             filter: { frontmatter: { featured: { eq: true } } }
@@ -60,7 +65,7 @@ export default function Page({ children, ...props }) {
             meta={[
               {
                 property: `og:image`,
-                content: `https://www.konveyor.io${share_image}`,
+                content: `${data.site.siteMetadata.siteUrl}${share_image}`,
               },
             ]}
           />
@@ -70,7 +75,7 @@ export default function Page({ children, ...props }) {
           )?.childImageSharp?.gatsbyImageData) && <></>}
           <div>
             <GatsbyImage
-              className="mt-6 rounded-md before:text-transparent before:absolute before:pointer-events-none before:pointer-events-none before:z-[1] before:w-full before:h-full before:shadow-image before:rounded-md relative rounded-md"
+              className="mt-6 rounded-md before:text-transparent before:absolute before:pointer-events-none before:z-[1] before:w-full before:h-full before:shadow-image before:rounded-md relative"
               image={bannerImg}
               alt=""
             />

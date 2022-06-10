@@ -1,38 +1,35 @@
-const prodPlugins = process.env.NODE_ENV === "production" ? [] : [];
-const buildEnv = process.env.GATSBY_BUILD_ENV
-  ? process.env.GATSBY_BUILD_ENV
-  : process.env.NODE_ENV;
+const pathPrefix = process.env.GATSBY_BUILD_ENV;
 
 module.exports = {
-  pathPrefix: "/windup-website",
+  pathPrefix: pathPrefix,
   siteMetadata: {
-    title: `Windup Community`,
-    description: `Windup description`,
-    author: `Windup Community`,
-    twitterCreator: `windup`,
-    siteUrl: `https://windup.github.io/`,
-    image: `/images/home-social-media.jpg`,
+    title: "Windup Community",
+    description:
+      "Open source tools and knowledge that help developers accelerate application modernization and migration projects.",
+    author: "Windup Community",
+    twitterCreator: "windup",
+    siteUrl: "https://windup.github.io/",
+    image: "/images/home-social-media.jpg",
     postsPerPage: 7,
     socialMedia: [
       {
-        platform: `slack`,
-        url: `https://kubernetes.slack.com/archives/CR85S82A2`,
-        title: `Join us on Slack`,
+        platform: "slack",
+        url: "https://kubernetes.slack.com/archives/CR85S82A2",
+        title: "Join us on Slack",
       },
       {
-        platform: `github`,
-        url: `https://github.com/konveyor`,
-        title: `Check out our GitHub repository`,
+        platform: "github",
+        url: "https://github.com/windup",
+        title: "Check out our GitHub repositories",
       },
       {
-        platform: `twitter`,
-        url: `https://twitter.com/Konveyor_io`,
-        title: `Connect with us on Twitter`,
+        platform: "twitter",
+        url: "https://twitter.com/windup",
+        title: "Connect with us on Twitter",
       },
     ],
   },
   plugins: [
-    ...prodPlugins,
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -40,6 +37,13 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.svg",
+        name: "Windup Community",
+        short_name: "Windup",
+        start_url: "/",
+        background_color: "#fff", //`#663399`,
+        theme_color: "#fff", //`#663399`,
+        display: "minimal-ui",
+        icon: "src/images/icon.svg", // This path is relative to the root of the site.
       },
     },
     "gatsby-plugin-mdx",
@@ -67,7 +71,7 @@ module.exports = {
     "gatsby-plugin-layout",
     "gatsby-plugin-sitemap",
     {
-      resolve: `gatsby-plugin-robots-txt`,
+      resolve: "gatsby-plugin-robots-txt",
       options: {
         resolveEnv: () => buildEnv,
         env: {
@@ -90,14 +94,14 @@ module.exports = {
     },
     "gatsby-plugin-catch-links",
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: "gatsby-plugin-mdx",
       options: {
         defaultLayouts: {
-          pages: require.resolve(`./src/templates/page.js`),
+          pages: require.resolve("./src/templates/page.js"),
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-remark-autolink-headers`,
+            resolve: "gatsby-remark-autolink-headers",
             options: {
               isIconAfterHeader: true,
               icon: `<svg aria-hidden="true" version="1.1" viewBox="0 0 16 16" ><path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>`,
@@ -105,30 +109,30 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-table-of-contents`,
+            resolve: "gatsby-remark-table-of-contents",
             options: {
               className: "table-of-contents",
             },
           },
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 2400,
               withWebp: true,
-              loading: `lazy`,
+              loading: "lazy",
             },
           },
           {
-            resolve: `gatsby-remark-external-links`,
+            resolve: "gatsby-remark-external-links",
             options: {
-              target: `_blank`,
-              rel: `noopener noreferrer`,
+              target: "_blank",
+              rel: "noopener noreferrer",
             },
           },
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: "gatsby-remark-prismjs",
             options: {
               showLineNumbers: false, //messes up when lines wrap
             },
@@ -137,33 +141,33 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: "images",
+        path: "${__dirname}/src/images",
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/content/blog`,
+        name: "blog",
+        path: "${__dirname}/src/content/blog",
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        name: "pages",
+        path: "${__dirname}/src/pages",
       },
     },
-    `gatsby-awesome-pagination`,
+    "gatsby-awesome-pagination",
     {
-      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      resolve: "@gatsby-contrib/gatsby-plugin-elasticlunr-search",
       options: {
         // Fields to index
-        fields: [`title`, `description`, `tags`, `content`],
-        // How to resolve each field`s value for a supported node type
+        fields: ["title", "description", "tags", "content"],
+        // How to resolve each field"s value for a supported node type
         resolvers: {
           Mdx: {
             title: (node) => node.frontmatter.title,

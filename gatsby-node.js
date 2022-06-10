@@ -1,8 +1,6 @@
 const path = require("path");
-const fse = require("fs-extra");
 const { paginate } = require("gatsby-awesome-pagination");
 const _ = require("lodash");
-// const { DateTime } = require('luxon')
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
