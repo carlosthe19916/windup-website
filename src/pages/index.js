@@ -4,8 +4,6 @@ import WidowControl from "../components/widow-control";
 import Seo from "../components/seo";
 import { ReactComponent as HomeBanner } from "../images/konveyor.svg";
 
-import Layout from "../layouts";
-
 const IndexPage = () => {
   const benefits = [
     {
@@ -99,13 +97,13 @@ const IndexPage = () => {
   ];
 
   return (
-    <Layout>
+    <>
       <Seo />
 
       <section className="bg-slate-700 text-white light overflow-hidden border-b border-base-300 dark:border-slate-800 relative before:absolute before:bg-hero-waves before:pointer-events-none before:hidden lg:before:flex before:text-transparent before:w-full before:h-full before:bg-left-bottom before:bg-repeat-x">
         <div className="page-wrapper flex flex-col lg:flex-row gap-8 items-center py-8 md:py-16 lg:pt-24 lg:pb-24">
           <div className="max-w-[55ch] lg:w-2/5">
-            <h1 className=" font-headings font-bold text-3xl md:text-4xl lg:text-5xl text-base-200">
+            <h1 className="font-headings font-bold text-3xl md:text-4xl lg:text-5xl text-base-200">
               <WidowControl text="Modernize and migrate applications" />
             </h1>
             <p className="mb-4 text-lg lg:text-xl text-base-600 lg:leading-relaxed max-w-[50ch] md:max-w-none text-base-200 my-6 lg:my-8">
@@ -160,7 +158,7 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 
