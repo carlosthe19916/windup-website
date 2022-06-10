@@ -14,12 +14,9 @@ export const Header = () => {
 
   const MenuItems = [
     {
-      path: "/",
-      title: "Home",
-    },
-    {
       path: "/docs/",
       title: "Docs",
+      openNewTab: true,
     },
     {
       path: "/blog/",
@@ -47,15 +44,26 @@ export const Header = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                {MenuItems.map((menu, index) => (
-                  <Link
-                    key={index}
-                    to={menu.path}
-                    className="text-gray-900 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium border-transparent flex-1 whitespace-nowrap border-b-2"
-                  >
-                    {menu.title}
-                  </Link>
-                ))}
+                {MenuItems.map((menu, index) =>
+                  menu.openNewTab ? (
+                    <a
+                      key={index}
+                      href={menu.path}
+                      target="_blank"
+                      className="text-gray-900 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium border-transparent flex-1 whitespace-nowrap border-b-2"
+                    >
+                      {menu.title}
+                    </a>
+                  ) : (
+                    <Link
+                      key={index}
+                      to={menu.path}
+                      className="text-gray-900 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium border-transparent flex-1 whitespace-nowrap border-b-2"
+                    >
+                      {menu.title}
+                    </Link>
+                  )
+                )}
               </div>
             </div>
           </div>
