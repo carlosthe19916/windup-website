@@ -28,6 +28,39 @@ module.exports = {
         title: "Connect with us on Twitter",
       },
     ],
+    product: {
+      latestVersion: "5.3.0.Final",
+      downloads: [
+        {
+          title: "CLI",
+          description: "Command Line Interface",
+          downloadURL:
+            "https://repo1.maven.org/maven2/org/jboss/windup/mta-cli/5.3.0.Final/mta-cli-5.3.0.Final-offline.zip",
+        },
+        {
+          title: "Web Console",
+          description: "Local install & OpenShift",
+          downloadURL:
+            "https://repo1.maven.org/maven2/org/jboss/windup/web/mta-web-distribution/5.3.0.Final/mta-web-distribution-5.3.0.Final-with-authentication.zip",
+        },
+      ],
+      idePlugins: [
+        {
+          title: "IntelliJ (Tech preview)",
+          linkURL:
+            "https://plugins.jetbrains.com/plugin/17389-migration-toolkit-for-applications-mta-by-red-hat",
+        },
+        {
+          title: "VSCode",
+          linkURL:
+            "https://marketplace.visualstudio.com/items?itemName=redhat.mta-vscode-extension",
+        },
+        {
+          title: "Eclipse CHE/CodeReady Workspace (hosted, Tech Preview)",
+          linkURL: "https://open-vsx.org/extension/redhat/mta-vscode-extension",
+        },
+      ],
+    },
   },
   plugins: [
     "gatsby-plugin-image",
