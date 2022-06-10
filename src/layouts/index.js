@@ -18,9 +18,11 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <div className="min-h-full">
+      <div className="font-body text-base-700 flex flex-col min-h-full">
         <Header siteTitle={data.site.siteMetadata.title || `Title`} />
-        {children}
+        <main id="main" className="w-full mx-auto mb-auto h-full">
+          {children}
+        </main>
         <Footer />
       </div>
     </>
