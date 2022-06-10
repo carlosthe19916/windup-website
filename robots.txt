@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /tags/
-Sitemap: https://windup.github.io/sitemap/sitemap-index.xml
+Sitemap: https://windup.github.io/windup-website/sitemap/sitemap-index.xml
 Host: https://windup.github.io
