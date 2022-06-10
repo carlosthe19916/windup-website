@@ -9,7 +9,7 @@ const PostCard = ({ post, condensed }) => {
     <div className={condensed ? "" : "md:first:col-span-2"}>
       <Link
         to={url}
-        className="shadow-post hover:shadow-post-hover flex flex-col bg-base-100 h-full p-4 group rounded-lg focus:ring-2 focus:ring-primary-400"
+        className="shadow-post hover:shadow-post-hover flex flex-col bg-base-100 h-full p-4 group rounded-lg focus:ring-2 focus:ring-primary-400 border-2 border-slate-200 hover:border-4"
       >
         <HeroImage
           className="before:text-transparent before:absolute before:pointer-events-none before:z-[1] before:w-full before:h-full before:shadow-image before:rounded-md relative rounded-md overflow-hidden"

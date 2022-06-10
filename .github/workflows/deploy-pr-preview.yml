@@ -1,0 +1,34 @@
+name: PR Preview
+on: pull_request
+
+jobs:
+  deploy-pr-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Install dependencies
+        run: npm install --force
+      - name: Build
+        run: npm run build
+
+      - name: Generate Surge URL
+        uses: actions/github-script@v3
+        id: surge-url
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number } } = context;
+            return `windup-website-pr-${issue_number}-preview.surge.sh`;
+          result-encoding: string
+      - name: Install Surge
+        run: npm install -g surge
+      - name: Deploy to Surge
+        run: surge ./public/ "${{steps.surge-url.outputs.result}}" --token 62bd7a07b9bf812ff8d3ea91ccd2dc2f
+      - name: Post URL as PR comment
+        uses: mshick/add-pr-comment@v1
+        with:
+          message: "🚀 Deployed Preview: http://${{steps.surge-url.outputs.result}} ✨"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

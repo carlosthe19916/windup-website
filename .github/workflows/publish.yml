@@ -6,7 +6,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
+    env:      
+      # Point to the subpath of the domain
+      GATSBY_PATH_PREFIX: /windup-website
       GATSBY_BUILD_ENV: production
     steps:
       - uses: actions/checkout@v2
