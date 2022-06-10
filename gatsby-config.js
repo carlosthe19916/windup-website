@@ -6,7 +6,7 @@ const buildEnv = process.env.GATSBY_BUILD_ENV
 module.exports = {
   siteMetadata: {
     title: `Windup Community`,
-    description: `Open source community helping others modernize and migrate apps to the hybrid cloud with open source tools. Practitioners also advise how to deconstruct monoliths and adopt containers and Kubernetes via Konveyor Community meetups.`,
+    description: `Windup description`,
     author: `Windup Community`,
     twitterCreator: `windup`,
     siteUrl: `https://windup.github.io/`,
