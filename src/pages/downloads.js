@@ -2,14 +2,14 @@ import * as React from "react";
 
 const AboutPage = () => {
   return (
-    <>
-      <header class="bg-white shadow">
+    <div>
+      <section class="bg-white shadow">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
           <h1 class="text-3xl font-bold text-gray-900">Downloads</h1>
         </div>
-      </header>
+      </section>
 
-      <main>
+      <section>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <div class="px-4 py-6 sm:px-0 not-prose relative  rounded-xl overflow-hidden dark:bg-slate-800/25">
             <div class="relative rounded-xl overflow-auto">
@@ -53,8 +53,8 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </main>
-    </>
+      </section>
+    </div>
   );
 };
 
