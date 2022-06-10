@@ -1,3 +1,6 @@
+const buildEnv = process.env.GATSBY_BUILD_ENV
+  ? process.env.GATSBY_BUILD_ENV
+  : process.env.NODE_ENV;
 const pathPrefix = process.env.GATSBY_PATH_PREFIX;
 
 module.exports = {
