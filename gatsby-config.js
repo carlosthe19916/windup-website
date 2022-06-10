@@ -1,4 +1,4 @@
-const pathPrefix = process.env.GATSBY_BUILD_ENV;
+const pathPrefix = process.env.GATSBY_PATH_PREFIX;
 
 module.exports = {
   pathPrefix: pathPrefix,
