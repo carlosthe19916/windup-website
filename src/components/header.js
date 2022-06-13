@@ -1,8 +1,5 @@
 import React, { useReducer } from "react";
-
 import { Link } from "gatsby";
-
-import { ColorModeToggle } from "./color-toggle";
 import { ReactComponent as Logo } from "../images/windup-logo.svg";
 import { ReactComponent as LogoDark } from "../images/windup-logo-color.svg";
 import HelloBar from "./hello-bar";
@@ -32,7 +29,7 @@ export const Header = () => {
   return (
     <>
       <HelloBar />
-      <nav className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-800">
+      <nav className="bg-slate-100 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -53,7 +50,8 @@ export const Header = () => {
                         key={index}
                         href={`${process.env.GATSBY_PATH_PREFIX}${menu.path}`}
                         target="_blank"
-                        className="text-gray-900 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium border-transparent flex-1 whitespace-nowrap border-b-2"
+                        rel="noreferrer"
+                        className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium border-transparent flex-1 whitespace-nowrap border-b-2"
                       >
                         {menu.title}
                       </a>
@@ -61,7 +59,7 @@ export const Header = () => {
                       <Link
                         key={index}
                         to={menu.path}
-                        className="text-gray-900 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium border-transparent flex-1 whitespace-nowrap border-b-2"
+                        className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium border-transparent flex-1 whitespace-nowrap border-b-2"
                       >
                         {menu.title}
                       </Link>
@@ -71,14 +69,14 @@ export const Header = () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="ml-4 flex items-center md:ml-6">
+              {/* <div className="ml-4 flex items-center md:ml-6">
                 <ColorModeToggle />
-              </div>
+              </div> */}
             </div>
             <div className="-mr-2 flex md:hidden">
-              <div className="inline-flex p-1">
+              {/* <div className="inline-flex p-1">
                 <ColorModeToggle />
-              </div>
+              </div> */}
               <div>
                 <button
                   type="button"

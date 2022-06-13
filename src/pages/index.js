@@ -100,7 +100,7 @@ const IndexPage = () => {
     <>
       <Seo />
 
-      <section className="bg-slate-700 text-white light overflow-hidden border-b border-base-300 dark:border-slate-800 relative before:absolute before:bg-hero-waves before:pointer-events-none before:hidden lg:before:flex before:text-transparent before:w-full before:h-full before:bg-left-bottom before:bg-repeat-x">
+      <section className="bg-slate-700 text-white light overflow-hidden border-b border-base-300 relative before:absolute before:bg-hero-waves before:pointer-events-none before:hidden lg:before:flex before:text-transparent before:w-full before:h-full before:bg-left-bottom before:bg-repeat-x">
         <div className="page-wrapper flex flex-col lg:flex-row gap-8 items-center py-8 md:py-16 lg:pt-24 lg:pb-24">
           <div className="max-w-[55ch] lg:w-2/5">
             <h1 className="font-headings font-bold text-3xl md:text-4xl lg:text-5xl text-base-200">
@@ -124,14 +124,14 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section className="bg-white dark:bg-slate-800 z-0 py-12 md:pt-10 md:pb-24 lg:pt-10 relative dark:after:opacity-60 after:z-[-1] after:text-transparent after:bg-wave-pattern after:rotate-180 after:bg-no-repeat after:w-full after:absolute after:h-full after:top-0 after:bg-left-top after:scale-x-[-1]">
+      <section className="bg-white z-0 py-12 md:pt-10 md:pb-24 lg:pt-10 relative after:z-[-1] after:text-transparent after:bg-wave-pattern after:rotate-180 after:bg-no-repeat after:w-full after:absolute after:h-full after:top-0 after:bg-left-top after:scale-x-[-1]">
         <div className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center">
-              <h2 className="text-base text-slate-600 dark:text-slate-100 font-semibold tracking-wide uppercase">
+              <h2 className="text-base text-slate-600 font-semibold tracking-wide uppercase">
                 features and benefits
               </h2>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 An automated scalable migration tool
               </p>
             </div>
@@ -141,14 +141,14 @@ const IndexPage = () => {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="relative">
                     <dt>
-                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-slate-500 text-white dark:bg-slate-400">
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-slate-500 text-white">
                         {benefit.image}
                       </div>
-                      <p className="ml-16 text-lg font-bold leading-6 text-gray-900 dark:text-gray-400">
+                      <p className="ml-16 text-lg font-bold leading-6 text-gray-900">
                         {benefit.title}
                       </p>
                     </dt>
-                    <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-gray-100">
+                    <dd className="mt-2 ml-16 text-base text-gray-500">
                       {benefit.description}
                     </dd>
                   </div>

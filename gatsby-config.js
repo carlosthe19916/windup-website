@@ -26,20 +26,8 @@ module.exports = {
         title: "Connect with us on Twitter",
       },
     ],
-    product: {
-      latestVersion: "5.3.0.Final",
-      downloads: [
-        {
-          title: "CLI",
-          description: "Command Line Interface",
-          url: "https://repo1.maven.org/maven2/org/jboss/windup/mta-cli/5.3.0.Final/mta-cli-5.3.0.Final-offline.zip",
-        },
-        {
-          title: "Web Console",
-          description: "Local install & OpenShift",
-          url: "https://repo1.maven.org/maven2/org/jboss/windup/web/mta-web-distribution/5.3.0.Final/mta-web-distribution-5.3.0.Final-with-authentication.zip",
-        },
-      ],
+    windup: {
+      version: "5.3.0.Final",
       idePlugins: [
         {
           title: "IntelliJ (Tech preview)",

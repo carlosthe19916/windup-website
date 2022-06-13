@@ -3,11 +3,11 @@ import React from "react";
 export const Footer = () => {
   return (
     <footer>
-      <section className="bg-gray-100 dark:bg-gray-900 shadow p-4 md:p-6 md:items-center md:justify-between md:flex">
-        <span className="text-gray-500 dark:text-gray-400 text-sm sm:text-center">
+      <section className="bg-gray-100 shadow p-4 md:p-6 md:items-center md:justify-between md:flex">
+        <span className="text-gray-500 text-sm sm:text-center">
           © 2022 Windup
         </span>
-        <ul className="text-gray-500 dark:text-gray-400 flex flex-wrap items-center mt-3 text-sm sm:mt-0">
+        <ul className="text-gray-500 flex flex-wrap items-center mt-3 text-sm sm:mt-0">
           <li>
             <a
               href="https://github.com/windup/windup/blob/master/LICENSE.txt"
