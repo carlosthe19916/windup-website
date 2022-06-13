@@ -24,6 +24,8 @@ const HelloBar = () => (
       const { background_color, end_date, link_text, link_url, title } =
         helloBarYaml;
 
+      const link_url_with_prefix = process.env.GATSBY_PATH_PREFIX + link_url;
+      console.log(link_url_with_prefix);
       return (
         <>
           {helloBarYaml === null || DateTime.fromISO(end_date) < now ? (
@@ -37,7 +39,7 @@ const HelloBar = () => (
               </span>
               <div className="hidden md:block !px-2 !py-1 !font-normal order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
                 <a
-                  href={link_url}
+                  href={link_url_with_prefix}
                   className={`flex items-center justify-center px-4 py-2 border rounded-md shadow-sm text-sm font-medium text-${background_color}-600 hover:bg-${background_color}-50 bg-white`}
                 >
                   {link_text}
@@ -45,7 +47,7 @@ const HelloBar = () => (
               </div>
               <IconBox
                 className="md:hidden"
-                url={link_url}
+                url={link_url_with_prefix}
                 icon={<ArrowRightCircle alt="Read more" />}
                 titleText={link_text}
               />

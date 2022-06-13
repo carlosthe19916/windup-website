@@ -42,7 +42,7 @@ export const Footer = () => {
               <li className="w-10 h-10 border rounded-full flex items-center justify-center">
                 <a href="https://twitter.com/windup">
                   <svg
-                    class="svg-icon w-6 h-6 text-blue-400"
+                    className="svg-icon w-6 h-6 text-blue-400"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -55,7 +55,7 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-        <style jsx>{`
+        <style jsx="true">{`
           .svg-icon path,
           .svg-icon polygon,
           .svg-icon rect {

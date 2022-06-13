@@ -24,9 +24,9 @@ const AboutPage = ({ data }) => {
 
   return (
     <div className="text-slate-900">
-      <section class="shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold">
+      <section className="shadow">
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold">
             Downloads{" "}
             <span className="bg-blue-400 rounded p-2">{windupVersion}</span>
           </h1>
@@ -34,11 +34,11 @@ const AboutPage = ({ data }) => {
       </section>
 
       <section>
-        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold">Server</h1>
-          <div class="px-4 py-6 sm:px-0 not-prose relative overflow-hidden ">
-            <div class="relative overflow-auto">
-              <table class="table-auto w-full">
+          <div className="px-4 py-6 sm:px-0 not-prose relative overflow-hidden ">
+            <div className="relative overflow-auto">
+              <table className="table-auto w-full">
                 <tbody className="">
                   {downloads.map((element, index) => (
                     <tr key={index} className="border">
@@ -72,11 +72,11 @@ const AboutPage = ({ data }) => {
           </div>
         </div>
 
-        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold">IDE plugins</h1>
-          <div class="px-4 py-6 sm:px-0 not-prose relative overflow-hidden ">
-            <div class="relative overflow-auto">
-              <table class="table-auto w-full">
+          <div className="px-4 py-6 sm:px-0 not-prose relative overflow-hidden ">
+            <div className="relative overflow-auto">
+              <table className="table-auto w-full">
                 <tbody className="">
                   {data.site.siteMetadata.windup.idePlugins.map(
                     (element, index) => (
@@ -102,11 +102,11 @@ const AboutPage = ({ data }) => {
           </div>
         </div>
 
-        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold">Quickstarts</h1>
-          <div class="px-4 py-6 sm:px-0 not-prose relative overflow-hidden ">
-            <div class="relative overflow-auto">
-              <table class="table-auto w-full">
+          <div className="px-4 py-6 sm:px-0 not-prose relative overflow-hidden ">
+            <div className="relative overflow-auto">
+              <table className="table-auto w-full">
                 <tbody className="">
                   <tr className="border">
                     <td className="w-4/5 text-2xl p-2">Windup quickstarts</td>
@@ -128,7 +128,7 @@ const AboutPage = ({ data }) => {
           </div>
         </div>
 
-        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <h1 className="text-2xl">
             For previous releases go{" "}
             <a
