@@ -25,7 +25,7 @@ const HelloBar = () => (
         helloBarYaml;
 
       const link_url_with_prefix = process.env.GATSBY_PATH_PREFIX + link_url;
-      console.log(link_url_with_prefix);
+
       return (
         <>
           {helloBarYaml === null || DateTime.fromISO(end_date) < now ? (
