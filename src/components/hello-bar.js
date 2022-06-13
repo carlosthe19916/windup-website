@@ -38,7 +38,7 @@ const HelloBar = () => (
               <div className="hidden md:block !px-2 !py-1 !font-normal order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
                 <a
                   href={link_url}
-                  className={`flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-${background_color}-600 hover:bg-${background_color}-50 bg-white`}
+                  className={`flex items-center justify-center px-4 py-2 border rounded-md shadow-sm text-sm font-medium text-${background_color}-600 hover:bg-${background_color}-50 bg-white`}
                 >
                   {link_text}
                 </a>
