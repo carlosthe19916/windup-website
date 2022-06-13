@@ -1,4 +1,5 @@
 import * as React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 import WidowControl from "../components/widow-control";
 import Seo from "../components/seo";
@@ -31,7 +32,7 @@ const IndexPage = () => {
     {
       title: "Understand application dependencies and shared code",
       description:
-        "When dealing with large application portfolios, it is critical to understand code dependencies, but also code that is shared between multiple applications. MTA automatically detects and visualizes these dependencies for you.",
+        "When dealing with large application portfolios, it is critical to understand code dependencies, but also code that is shared between multiple applications. Windup automatically detects and visualizes these dependencies for you.",
       image: (
         <svg
           className="h-6 w-6"
@@ -50,50 +51,7 @@ const IndexPage = () => {
         </svg>
       ),
     },
-    {
-      title: "Understand migration challenges and support effort estimation",
-      description:
-        "It allows you to browse the source code for identified migration tasks, and gives inline hints with suggestions and recommendations. That not only saves teams a lot of time you would otherwise spend on analysis, but also minimizes the risk.",
-      image: (
-        <svg
-          className="h-6 w-6"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="2"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
-    },
-    {
-      title: "Support for popular IDEs",
-      description:
-        "Once you’re starting the actual transformation, you will want to switch to your favorite IDE. We provide a range of IDE plugins such as CodeReady Studio / Eclipse, CodeReady Workspace / Eclipse Che, and a Visual Studio Code Extension. The plugins come with all the reporting capabilities of the Web Console, plus additional features such as a task list, support for automatic code changes, and a guided rules editor to easily create new rules based on newly identified migration challenges, so these can be shared with the rest of the team or contributed upstream.",
-      image: (
-        <svg
-          className="h-6 w-6"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="2"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
-    },
+    
   ];
 
   return (
@@ -124,7 +82,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section className="bg-white z-0 py-12 md:pt-10 md:pb-24 lg:pt-10 relative after:z-[-1] after:text-transparent after:bg-wave-pattern after:rotate-180 after:bg-no-repeat after:w-full after:absolute after:h-full after:top-0 after:bg-left-top after:scale-x-[-1]">
+      <section className="bg-white z-0 py-12 md:pt-10 md:pb-12 lg:pt-10 relative after:z-[-1] after:text-transparent after:bg-wave-pattern after:rotate-180 after:bg-no-repeat after:w-full after:absolute after:h-full after:top-0 after:bg-left-top after:scale-x-[-1]">
         <div className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center">
@@ -158,6 +116,67 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+
+      <section className="cta-sec relative max-w-screen-xl mx-auto py-12 px-4 sm:px-8">
+        <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
+        <div className="relative z-10 gap-5 items-center lg:flex">
+          <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
+            <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
+              Manage projects and upload your{" "}
+              <span className="text-indigo-600">application</span>
+            </h3>
+            <p className="text-gray-500 leading-relaxed mt-3">
+              Within the web console, developers and business owners can manage
+              multiple projects by either uploading single apps or grouping
+              bigger application portfolios with dozens or hundreds of
+              applications into projects for analysis. The web console also
+              helps developers create and optimize their reports to detail
+              challenges and create solutions.
+            </p>
+          </div>
+          <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
+            <StaticImage
+              src="../images/web-console.png"
+              alt="Web Console"
+              className="w-full border"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="cta-sec relative max-w-screen-xl mx-auto py-12 px-4 sm:px-8">
+        <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
+        <div className="relative z-10 gap-5 items-center lg:flex">
+          <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
+            <StaticImage
+              src="../images/vscode.png"
+              alt="Web Console"
+              className="w-full border"
+            />
+          </div>
+          <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
+            <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
+              Code transformation: support for popular{" "}
+              <span className="text-indigo-600">IDEs</span>
+            </h3>
+            <p className="text-gray-500 leading-relaxed mt-3">
+              Once you’re starting the actual transformation, you will want to
+              switch to your favorite IDE. We provide a range of IDE plugins
+              such as CodeReady Studio / Eclipse, CodeReady Workspace / Eclipse
+              Che, and a Visual Studio Code Extension. The plugins come with all
+              the reporting capabilities of the Web Console, plus additional
+              features such as a task list, support for automatic code changes,
+              and a guided rules editor to easily create new rules based on
+              newly identified migration challenges, so these can be shared with
+              the rest of the team or contributed upstream.
+            </p>
+          </div>
+        </div>
+      </section>
+      <style jsx>{`
+        .cta-sec {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+      `}</style>
     </>
   );
 };

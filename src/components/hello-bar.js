@@ -30,7 +30,7 @@ const HelloBar = () => (
             <></>
           ) : (
             <div
-              className={`p-2 flex gap-6 items-center justify-between md:justify-center bg-${background_color}-300`}
+              className={`p-2 flex gap-6 items-center justify-between md:justify-center bg-${background_color}-200`}
             >
               <span className={`text-${background_color}-800`}>
                 <WidowControl text={title} />
