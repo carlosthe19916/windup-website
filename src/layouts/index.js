@@ -1,8 +1,8 @@
 import React from "react";
-import { MDXProvider } from "@mdx-js/react";
 import ReactDOMServer from "react-dom/server";
-import he from "he";
 import { graphql, useStaticQuery } from "gatsby";
+import { MDXProvider } from "@mdx-js/react";
+import he from "he";
 
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";

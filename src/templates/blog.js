@@ -9,7 +9,6 @@ const title = "Windup Blog";
 
 const BlogIndex = ({ data, pageContext }) => {
   const posts = data.allMdx.nodes;
-  console.log(posts);
 
   return (
     <div className="max-w-screen-xl page-wrapper">

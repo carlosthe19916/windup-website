@@ -35,7 +35,7 @@ export default function PostPage({ data, ...props }) {
             <ShareButtons
               title={title}
               url={url}
-              twitterHandle="konveyor_io"
+              twitterHandle="windup"
               tags={tags}
             />
           </div>

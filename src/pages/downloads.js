@@ -9,7 +9,9 @@ const AboutPage = ({ data }) => {
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
           <h1 class="text-3xl font-bold text-gray-900">
             Downloads{" "}
-            <span className="bg-slate-300 rounded p-2">{data.site.siteMetadata.product.latestVersion}</span>
+            <span className="bg-slate-300 rounded p-2">
+              {data.site.siteMetadata.product.latestVersion}
+            </span>
           </h1>
         </div>
       </section>
@@ -27,7 +29,7 @@ const AboutPage = ({ data }) => {
                         <td className="text-2xl p-2">{element.title}</td>
                         <td className="text-1xl">{element.description}</td>
                         <td>
-                          <a className="flex" href={element.downloadURL}>
+                          <a className="flex" href={element.url}>
                             <Download />
                             &nbsp;Download
                           </a>
@@ -52,7 +54,7 @@ const AboutPage = ({ data }) => {
                       <tr key={index} className="border">
                         <td className="text-2xl p-2">{element.title}</td>
                         <td>
-                          <a className="flex" href={element.linkURL}>
+                          <a className="flex" href={element.url}>
                             <Link />
                             &nbsp;Marketplace
                           </a>
@@ -77,13 +79,13 @@ export const query = graphql`
         product {
           latestVersion
           downloads {
-            downloadURL
             title
             description
+            url
           }
           idePlugins {
-            linkURL
             title
+            url
           }
         }
       }

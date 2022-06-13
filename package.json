@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "windup-website",
-  "author": "Carlos Feria",
+  "author": "Windup Community",
   "keywords": [
     "gatsby"
   ],
@@ -45,7 +45,9 @@
     "gatsby-remark-table-of-contents": "^2.0.0",
     "gatsby-source-filesystem": "^4.16.0",
     "gatsby-transformer-sharp": "^4.16.0",
+    "gatsby-transformer-yaml": "^4.16.0",
     "he": "^1.2.0",
+    "luxon": "^2.4.0",
     "postcss": "^8.4.14",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

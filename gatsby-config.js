@@ -8,18 +8,13 @@ module.exports = {
   siteMetadata: {
     title: "Windup Community",
     description:
-      "Open source tools and knowledge that help developers accelerate application modernization and migration projects.",
+      "Modernize and migrate applications and move to cloud and containers",
     author: "Windup Community",
     twitterCreator: "windup",
     siteUrl: "https://windup.github.io/",
     image: "/images/home-social-media.jpg",
     postsPerPage: 7,
     socialMedia: [
-      {
-        platform: "slack",
-        url: "https://kubernetes.slack.com/archives/CR85S82A2",
-        title: "Join us on Slack",
-      },
       {
         platform: "github",
         url: "https://github.com/windup",
@@ -37,30 +32,26 @@ module.exports = {
         {
           title: "CLI",
           description: "Command Line Interface",
-          downloadURL:
-            "https://repo1.maven.org/maven2/org/jboss/windup/mta-cli/5.3.0.Final/mta-cli-5.3.0.Final-offline.zip",
+          url: "https://repo1.maven.org/maven2/org/jboss/windup/mta-cli/5.3.0.Final/mta-cli-5.3.0.Final-offline.zip",
         },
         {
           title: "Web Console",
           description: "Local install & OpenShift",
-          downloadURL:
-            "https://repo1.maven.org/maven2/org/jboss/windup/web/mta-web-distribution/5.3.0.Final/mta-web-distribution-5.3.0.Final-with-authentication.zip",
+          url: "https://repo1.maven.org/maven2/org/jboss/windup/web/mta-web-distribution/5.3.0.Final/mta-web-distribution-5.3.0.Final-with-authentication.zip",
         },
       ],
       idePlugins: [
         {
           title: "IntelliJ (Tech preview)",
-          linkURL:
-            "https://plugins.jetbrains.com/plugin/17389-migration-toolkit-for-applications-mta-by-red-hat",
+          url: "https://plugins.jetbrains.com/plugin/17389-migration-toolkit-for-applications-mta-by-red-hat",
         },
         {
           title: "VSCode",
-          linkURL:
-            "https://marketplace.visualstudio.com/items?itemName=redhat.mta-vscode-extension",
+          url: "https://marketplace.visualstudio.com/items?itemName=redhat.mta-vscode-extension",
         },
         {
           title: "Eclipse CHE/CodeReady Workspace (hosted, Tech Preview)",
-          linkURL: "https://open-vsx.org/extension/redhat/mta-vscode-extension",
+          url: "https://open-vsx.org/extension/redhat/mta-vscode-extension",
         },
       ],
     },
@@ -72,7 +63,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.svg",
         name: "Windup Community",
         short_name: "Windup",
         start_url: "/",
@@ -82,14 +72,13 @@ module.exports = {
         icon: "src/images/icon.svg", // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images`,
       },
       __key: "images",
     },
@@ -97,14 +86,30 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: `${__dirname}/src/pages`,
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: `${__dirname}/src/content/blog`,
+      },
+      __key: "blog",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `hello-bar`,
+        path: `${__dirname}/src/content/hello-bar`,
+      },
     },
     "gatsby-plugin-postcss",
     "gatsby-plugin-svgr",
     "gatsby-plugin-layout",
     "gatsby-plugin-sitemap",
+    "gatsby-transformer-yaml",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -131,7 +136,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mdx",
       options: {
-        extensioextensions: [`.md`, `.mdx`],
+        extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           pages: require.resolve("./src/templates/page.js"),
         },
@@ -174,27 +179,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "blog",
-        path: `${__dirname}/src/content/blog`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: `${__dirname}/src/pages`,
       },
     },
     "gatsby-awesome-pagination",
