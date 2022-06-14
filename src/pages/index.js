@@ -3,7 +3,6 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import WidowControl from "../components/widow-control";
 import Seo from "../components/seo";
-import { ReactComponent as HomeBanner } from "../images/konveyor.svg";
 
 const IndexPage = () => {
   const benefits = [
@@ -51,7 +50,6 @@ const IndexPage = () => {
         </svg>
       ),
     },
-    
   ];
 
   return (
@@ -74,8 +72,9 @@ const IndexPage = () => {
             </p>
           </div>
           <div className="w-full lg:w-3/5">
-            <HomeBanner
-              alt="Use Konveyor tools to assess and rehost, replatform, or refactor existing applications"
+            <StaticImage
+              src="../images/transformation-path.png"
+              alt="Use Windup for migrating and modernizing your applications"
               className="banner"
             />
           </div>
