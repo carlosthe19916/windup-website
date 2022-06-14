@@ -48,7 +48,11 @@ export const Header = () => {
                     menu.openNewTab ? (
                       <a
                         key={index}
-                        href={`${process.env.GATSBY_PATH_PREFIX}${menu.path}`}
+                        href={`${
+                          process.env.GATSBY_PATH_PREFIX
+                            ? process.env.GATSBY_PATH_PREFIX + menu.path
+                            : menu.path
+                        }`}
                         target="_blank"
                         rel="noreferrer"
                         className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium border-transparent flex-1 whitespace-nowrap border-b-2"

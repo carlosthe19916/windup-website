@@ -24,7 +24,9 @@ const HelloBar = () => (
       const { background_color, end_date, link_text, link_url, title } =
         helloBarYaml;
 
-      const link_url_with_prefix = process.env.GATSBY_PATH_PREFIX + link_url;
+      const link_url_with_prefix = process.env.GATSBY_PATH_PREFIX
+        ? process.env.GATSBY_PATH_PREFIX + link_url
+        : link_url;
 
       return (
         <>
