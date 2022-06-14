@@ -11,11 +11,11 @@ export const Header = () => {
   );
 
   const MenuItems = [
-    {
-      path: "/windup-documentation/",
-      title: "Docs",
-      openNewTab: true,
-    },
+    // {
+    //   path: "/windup-documentation/",
+    //   title: "Docs",
+    //   openNewTab: true,
+    // },
     {
       path: "/blog/",
       title: "Blog",
