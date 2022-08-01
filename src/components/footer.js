@@ -39,7 +39,7 @@ export const Footer = () => {
           </div>
           <div className="mt-6 sm:mt-0">
             <ul className="flex items-center space-x-4">
-              <li className="w-10 h-10 border rounded-full flex items-center justify-center">
+              {/* <li className="w-10 h-10 border rounded-full flex items-center justify-center">
                 <a href="https://twitter.com/windup">
                   <svg
                     className="svg-icon w-6 h-6 text-blue-400"
@@ -51,7 +51,7 @@ export const Footer = () => {
                     ></path>
                   </svg>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

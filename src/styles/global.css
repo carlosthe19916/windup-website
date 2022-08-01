@@ -9,3 +9,9 @@
 .page-wrapper {
   @apply px-4 md:px-6 mx-auto max-w-[1440px];
 }
+
+a.anchor {
+  margin-left:.5rem;
+  height: 1rem;
+  width: 1rem
+}

@@ -63,12 +63,11 @@ const IndexPage = () => {
               <WidowControl text="Modernize and migrate applications" />
             </h1>
             <p className="mb-4 text-lg lg:text-xl text-base-600 lg:leading-relaxed max-w-[50ch] md:max-w-none text-base-200 my-6 lg:my-8">
-              Windup is an assembly of tools that support large-scale Java
-              application modernization and migration projects across a broad
-              range of transformations and use cases. It accelerates application
-              code analysis, supports effort estimation, accelerates code
-              migration, and helps you move applications to the cloud and
-              containers.
+              Windup is a tool that supports large-scale Java application
+              modernization and migration projects across a broad range of
+              transformations and use cases. It automates application code
+              analysis, supports effort estimation, accelerates code migration,
+              and helps you move applications to the cloud and containers.
             </p>
           </div>
           <div className="w-full lg:w-3/5">
@@ -142,7 +141,7 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <section className="cta-sec relative max-w-screen-xl mx-auto py-12 px-4 sm:px-8">
+      {/* <section className="cta-sec relative max-w-screen-xl mx-auto py-12 px-4 sm:px-8">
         <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
         <div className="relative z-10 gap-5 items-center lg:flex">
           <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
@@ -167,6 +166,34 @@ const IndexPage = () => {
               and a guided rules editor to easily create new rules based on
               newly identified migration challenges, so these can be shared with
               the rest of the team or contributed upstream.
+            </p>
+          </div>
+        </div>
+      </section> */}
+      <section className="cta-sec relative max-w-screen-xl mx-auto py-12 px-4 sm:px-8">
+        <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
+        <div className="relative z-10 gap-5 items-center lg:flex">
+          <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
+            <StaticImage
+              src="../images/custom-rule.png"
+              alt="Web Console"
+              className="w-full border"
+            />
+          </div>
+          <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
+            <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
+              Highly <span className="text-indigo-600">extensible</span>
+            </h3>
+            <p className="text-gray-500 leading-relaxed mt-3">
+              Windup is highly extensible by allowing you to create your own
+              rule sets and target runtime labels. Custom rules can be developed
+              to extend existing rule sets, build new migration paths, or
+              enforce certain code standards in your teams. Best of all, it’s
+              very easy to write new rules - either as XML, or using the guided
+              rules editor in the IDE plug-ins. Target runtime labels assess the
+              technologies discovered within applications to determine if they
+              are supported by a specific runtime. Wildfly and Tomcat are the 2
+              shipped target runtime labels.
             </p>
           </div>
         </div>
