@@ -20,7 +20,7 @@ function CopyCodeButton({ content, duration }) {
 
   return (
     <button
-      className="light absolute top-0 right-0 p-2 bg-primary-800 rounded-tr-md rounded-bl-md text-sm text-base-300 leading-none hover:bg-primary-600 focus:ring-2 focus:ring-primary-400 focus:ring-inset disabled:hover:bg-transparent disabled:focus:ring-0"
+      className="light absolute top-0 right-0 p-2 bg-primary-800 rounded-tr-md rounded-bl-md text-sm text-base-300 leading-none hover:bg-primary-600 focus:ring-2 focus:ring-primary-400 focus:ring-inset disabled:hover:bg-transparent disabled:focus:ring-0 text-neutral-400"
       disabled={copied}
       onClick={async () => {
         copyToClipboard(content);

@@ -16,7 +16,7 @@ export default function PostPage({ data, ...props }) {
   const url = props.location.href;
 
   return (
-    <div className="!max-w-screen-lg page-wrapper">
+    <div className="!max-w-screen-xl page-wrapper">
       <Seo
         title={title}
         description={description}

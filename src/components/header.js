@@ -17,6 +17,10 @@ export const Header = () => {
     //   openNewTab: true,
     // },
     {
+      path: "/blog/getting-started/",
+      title: "Get started",
+    },
+    {
       path: "/blog/",
       title: "Blog",
     },
